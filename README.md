@@ -12,7 +12,7 @@ How can I lock down my user’s Amazon EC2 access to a single VPC using terrafor
 
 ```hcl
 module "user01" {
-  source = source = "git@github.com:rafilkmp3/terraform-iam-user-vpc-lockdown.git"
+  source   = "git@github.com:rafilkmp3/terraform-iam-user-vpc-lockdown.git"
 
   region   = "us-west-2"
   username = "user-01"
