@@ -21,6 +21,6 @@ module "user01" {
 }
 
 output "credentials" {
-  value = "${module.applicant-03.credentials}"
+  value = "${module.user01.credentials}"
 }
 ```
