@@ -18,6 +18,10 @@ output "secret_key" {
   value = "${module.iam_user.keybase_secret_key_decrypt_command}"
 }
 
+output "azs" {
+  value = "${data.aws_availability_zones.all_azs.names}"
+}
+
 output "credentials" {
   value = "${
     map(
