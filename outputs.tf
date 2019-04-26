@@ -22,6 +22,10 @@ output "azs" {
   value = "${data.aws_availability_zones.all_azs.names}"
 }
 
+output "region" {
+  value = "${var.region}"
+}
+
 output "credentials" {
   value = "${
     map(
@@ -29,7 +33,8 @@ output "credentials" {
       "username",                   "${module.iam_user.this_iam_user_name}",
       "password decrypt command",   "${module.iam_user.keybase_password_decrypt_command}",
       "access_key",                 "${module.iam_user.this_iam_access_key_id}",
-      "secret_key decrypt command", "${module.iam_user.keybase_secret_key_decrypt_command}"
+      "secret_key decrypt command", "${module.iam_user.keybase_secret_key_decrypt_command}",
+      "region",                     "${var.region}"
     )
   }"
 }

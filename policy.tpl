@@ -7,6 +7,8 @@
                 "ec2:Describe*",
                 "ec2:CreateKeyPair",
                 "ec2:CreateSecurityGroup",
+                "ec2:CreateTags",
+                "ec2:DeleteTags",
                 "iam:GetInstanceProfiles",
                 "iam:ListInstanceProfiles"
             ],
